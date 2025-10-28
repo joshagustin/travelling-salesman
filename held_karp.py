@@ -1,3 +1,5 @@
+# source https://github.com/carl-olin/held-karp
+
 import itertools
 import random
 import sys
@@ -79,13 +81,13 @@ def generate_distances(n):
 
 def read_distances(filename):
     dists = []
-    with open(filename, 'rb') as f:
+    with open(filename, 'r') as f:
         for line in f:
             # Skip comments
             if line[0] == '#':
                 continue
 
-            dists.append(map(int, map(str.strip, line.split(','))))
+            dists.append(list(map(int, map(str.strip, line.split(',')))))
 
     return dists
 
