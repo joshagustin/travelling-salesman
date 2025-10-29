@@ -8,10 +8,12 @@ if __name__ == '__main__':
     test_cases = list(range(5, 31, 5))
     
     for case in test_cases:
-        # Generate one distance matrix to be shared for this test case
         distance_matrix = matrix.gen_distance_matrix(case)
 
-        # --- Held-Karp Algorithm ---
+        # insert EXHAUSTIVE SEARCH ALGORITHM here
+        # use "total_time_es" for total time
+
+        # DP HELD KARP ALGORITHM
         print(f"--- Testing n = {case} cities (Held-Karp) ---")
         total_time_hk = 0  # Use a unique variable for Held-Karp time
 
@@ -24,12 +26,9 @@ if __name__ == '__main__':
             total_time_hk += elapsed_time
 
             print(f"{elapsed_time:.6f} seconds")
-        
-        # Use the 'runs' variable for the average
         print(f"\n{case} cities average run time with Held-Karp: {total_time_hk / runs:.6f} seconds\n")
 
-
-        # --- Greedy Nearest Neighbor Algorithm ---
+        # GREEDY NEAREST NEIGHBOR ALGORITHM
         print(f"--- Testing n = {case} cities (Greedy Nearest Neighbor) ---")
         total_time_nn = 0
 
@@ -43,9 +42,7 @@ if __name__ == '__main__':
 
             print(f"{elapsed_time:.6f} seconds")
 
-        # Use the 'runs' variable for the average
         print(f"\n{case} cities average run time with Greedy Nearest Neighbor: {total_time_nn / runs:.6f} seconds\n")
-        
         print("--------------------------------------------------\n")
   
 
