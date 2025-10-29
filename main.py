@@ -26,6 +26,7 @@ if __name__ == '__main__':
             total_time_hk += elapsed_time
 
             print(f"{elapsed_time:.6f} seconds")
+        
         print(f"\n{case} cities average run time with Held-Karp: {total_time_hk / runs:.6f} seconds\n")
 
         # GREEDY NEAREST NEIGHBOR ALGORITHM

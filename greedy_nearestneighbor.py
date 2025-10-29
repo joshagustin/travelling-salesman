@@ -3,9 +3,11 @@ import sys
 def solve_nn_tsp(dist_matrix, start_city_index=0):
     """
     Solves the TSP using the Greedy Nearest Neighbor heuristic.
+
     Args:
         dist_matrix (numpy.ndarray): The n x n distance matrix.
         start_city_index (int): The index of the starting city.
+
     Returns:
         tuple: A tuple containing:
             - list: The tour (path) as a list of city indices.
