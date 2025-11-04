@@ -113,8 +113,8 @@ if __name__ == '__main__':
     test_cases = list(range(3, 31, 3))
     
     # Determine maximum feasible n for each algorithm
-    max_feasible_es = 12  # set for the mean time
-    max_feasible_hk = 20  # set for the mean time to see generated graphs
+    max_feasible_es = 13  # set for the mean time
+    max_feasible_hk = 24  # set for the mean time to see generated graphs
     
     # Lists to store results for plotting
     es_avg_times = []
@@ -143,6 +143,12 @@ if __name__ == '__main__':
         text = f"Testing {case} Cities"
         print(text.center(88))
         print("="*88)
+        
+        # Display distance matrix
+        print("\nDistance Matrix:")
+        for row in distance_matrix:
+            print(''.join([str(n).rjust(4) for n in row]))
+        print()
 
         # Lists to store per-run results
         es_times, es_costs = [], []
